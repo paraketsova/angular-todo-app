@@ -18,5 +18,11 @@
     </form>
   </div>
 
-  <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (checkboxClicked)="toggleCompleted(todo)"
+    (editClicked)="editTodo(todo)"
+
+  ></app-todo-item>
 

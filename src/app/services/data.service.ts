@@ -9,7 +9,7 @@ export class DataService {
   todos: Todo[] = [
     new Todo('This is a test!'),
     new Todo('This test #2'),
-  ] 
+  ]
 
   constructor() { }
 
@@ -21,11 +21,11 @@ export class DataService {
     this.todos.push(todo);
   }
 
-  updateTodo(ind: number, updatedTodo: Todo) {
-    this.todos[ind] = updatedTodo; 
+  updateTodo(index: number, updatedTodo: Todo) {
+    this.todos[index] = updatedTodo;
   }
 
-  deleteTodo(ind: number) {
-    this.todos.splice(ind, 1); 
+  deleteTodo(index: number) {
+    this.todos.splice(index, 1);
   }
 }

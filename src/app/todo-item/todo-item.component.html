@@ -1,14 +1,14 @@
 <div class="card" style="width: 18rem;" >
   <div>
     <div class="checkbox">
-      <input type="checkbox" id="todos" name="scales"
+      <input type="checkbox" id="todos" (click)="onCheckboxClicked()"
       checked>
       <label for="todos">
         <h2 class="card-title">{{ todo.title }}</h2>
       </label>
     </div>
     <p class=card-p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, in.</p>
-    <button class="btn btn-warning">Edit</button>
+    <button class="btn btn-warning" (click)="onEditClicked()">Edit</button>
     <button class="btn btn-danger">Delete</button>
   </div>
 </div>
