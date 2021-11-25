@@ -1,9 +1,14 @@
 
   <div class="form-todo">
-    <form>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
       <div class="form-control">
         <label>Title</label>
-        <input type="text" placeholder="Add title">
+        <input
+          ngModel
+          name="title" 
+          type="text" 
+          placeholder="Add title"
+        >
       </div>
 <!--       <div class="form-control">
         <label>Content</label>
@@ -13,13 +18,13 @@
     </form>
   </div>
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;" *ngFor="let todo of todos">
     <div>
       <div class="checkbox">
         <input type="checkbox" id="todos" name="scales"
         checked>
         <label for="todos">
-          <h2 class="card-title">Card title</h2>
+          <h2 class="card-title">{{ todo.title }}</h2>
         </label>
       </div>
       <p class=card-p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, in.</p>
