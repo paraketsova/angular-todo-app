@@ -7,8 +7,8 @@ import { Todo } from './todo.model';
 export class DataService {
 
   todos: Todo[] = [
-    new Todo('This is a test!', 'nfkjgjrighotrotyioptiyoprtuioui'),
-    new Todo('This test #2', 'hkrgheoriorttyitiytryujjijg'),
+    new Todo('Test #1', 'This is a first task'),
+    new Todo('Test #2', 'This is a second task'),
   ]
 
   constructor() { }
